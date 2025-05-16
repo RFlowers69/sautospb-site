@@ -5,15 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>sautospb — Услуги</title>
   <style>
-    body {
+    /* Обнуляем базовые отступы и задаём 100% высоты для html и body */
+    html, body {
       margin: 0; padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #fff;
       color: #222;
+      box-sizing: border-box; /* Для удобной работы с размерами */
+    }
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      min-height: 100vh;
+      max-width: 100vw; /* Не даём телу выходить за ширину окна */
+      overflow-x: hidden; /* Запрет горизонтальной прокрутки */
     }
+
     header {
       background: #f4f4f4;
       padding: 1rem 2rem;
@@ -21,7 +33,9 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      flex-shrink: 0; /* Не сжимать шапку */
     }
+
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
@@ -30,54 +44,76 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #003d80;
     }
+
     main {
       flex: 1;
-      overflow-y: auto;
-      padding: 2rem;
+      padding: 2rem 1rem;
       max-width: 960px;
       margin: 0 auto;
       display: flex;
-      gap: 2rem;
+      flex-direction: column; /* Заголовок и колонки вертикально */
+      overflow-wrap: break-word; /* Чтобы длинные слова не ломали верстку */
+      min-width: 0; /* Для правильного сжатия flex-элементов */
     }
-    .column {
-      flex: 1;
-      min-width: 0;
-    }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       text-align: center;
       color: #333;
-      width: 100%;
+      flex-shrink: 0;
     }
+
+    .columns {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap; /* Чтобы на маленьких экранах колонки не выходили за пределы */
+      justify-content: center; /* Центрируем колонки, если меньше места */
+    }
+
+    .column {
+      flex: 1 1 300px; /* Рост, сжатие и базовая ширина 300px */
+      min-width: 280px; /* Минимальная ширина колонки */
+      max-width: 100%;  /* Не выходит за пределы контейнера */
+    }
+
     h2 {
       color: #0056b3;
       margin-top: 1rem;
       margin-bottom: 0.5rem;
     }
+
     p, ul {
       font-size: 1.1rem;
       line-height: 1.5;
       color: #444;
       margin-bottom: 1rem;
     }
+
     ul {
       padding-left: 1.2rem;
     }
+
     footer {
       background: #f4f4f4;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #555;
+      flex-shrink: 0;
     }
+
     @media (max-width: 720px) {
       main {
-        flex-direction: column;
         padding: 1rem;
+      }
+      .columns {
+        flex-direction: column;
+        gap: 1.5rem;
       }
       h1 {
         font-size: 2rem;
@@ -97,37 +133,39 @@
   </header>
   <main>
     <h1>Услуги</h1>
-    <div class="column">
-      <h2>Разработка электроники</h2>
-      <ul>
-        <li>Проектирование схем и разработка печатных плат (PCB)</li>
-        <li>Разработка прошивок и ПО для микроконтроллеров</li>
-        <li>Подготовка технической и производственной документации</li>
-        <li>Оптимизация решений под бюджет и серийность</li>
-      </ul>
-      <h2>Заказ плат и комплектация</h2>
-      <ul>
-        <li>Заказ печатных плат у надёжных подрядчиков</li>
-        <li>Подбор и закупка компонентов</li>
-        <li>Работа с материалами заказчика</li>
-        <li>Проверка комплектующих перед сборкой</li>
-      </ul>
-    </div>
-    <div class="column">
-      <h2>Монтаж и сборка</h2>
-      <ul>
-        <li>Поверхностный (SMD) и выводной (THT) монтаж</li>
-        <li>Ручная пайка и мелкосерийная сборка</li>
-        <li>Сборка устройств в корпуса, установка разъёмов, экранов и др.</li>
-        <li>Контроль качества и функциональное тестирование</li>
-      </ul>
-      <h2>Изготовление кабельных сборок</h2>
-      <ul>
-        <li>Изготовление индивидуальных кабелей и жгутов</li>
-        <li>Обжим, пайка и маркировка проводов</li>
-        <li>Сборка соединительных кабелей по спецификации</li>
-        <li>Проверка на целостность и электропроводимость</li>
-      </ul>
+    <div class="columns">
+      <div class="column">
+        <h2>Разработка электроники</h2>
+        <ul>
+          <li>Проектирование схем и разработка печатных плат (PCB)</li>
+          <li>Разработка прошивок и ПО для микроконтроллеров</li>
+          <li>Подготовка технической и производственной документации</li>
+          <li>Оптимизация решений под бюджет и серийность</li>
+        </ul>
+        <h2>Заказ плат и комплектация</h2>
+        <ul>
+          <li>Заказ печатных плат у надёжных подрядчиков</li>
+          <li>Подбор и закупка компонентов</li>
+          <li>Работа с материалами заказчика</li>
+          <li>Проверка комплектующих перед сборкой</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Монтаж и сборка</h2>
+        <ul>
+          <li>Поверхностный (SMD) и выводной (THT) монтаж</li>
+          <li>Ручная пайка и мелкосерийная сборка</li>
+          <li>Сборка устройств в корпуса, установка разъёмов, экранов и др.</li>
+          <li>Контроль качества и функциональное тестирование</li>
+        </ul>
+        <h2>Изготовление кабельных сборок</h2>
+        <ul>
+          <li>Изготовление индивидуальных кабелей и жгутов</li>
+          <li>Обжим, пайка и маркировка проводов</li>
+          <li>Сборка соединительных кабелей по спецификации</li>
+          <li>Проверка на целостность и электропроводимость</li>
+        </ul>
+      </div>
     </div>
   </main>
   <footer>
