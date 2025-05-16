@@ -1,98 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/index.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>sautospb — Главная</title>
-  <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
-    header {
-      background: #f4f4f4;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #0056b3;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #003d80;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2rem;
-    }
-    p {
-      font-size: 1.25rem;
-      margin: 0 0 2rem 0;
-      max-width: 500px;
-      line-height: 1.5;
-    }
-    .btn-contact {
-      background-color: #0056b3;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,86,179,0.3);
-      transition: background-color 0.3s, box-shadow 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-contact:hover {
-      background-color: #003d80;
-      box-shadow: 0 6px 12px rgba(0,61,128,0.5);
-    }
-    footer {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-      .btn-contact {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -104,11 +17,11 @@
       <a href="contact.html">Контакты</a>
     </nav>
   </header>
-  <main>
-    <h1>Добро пожаловать в sautospb</h1>
-    <p>Индивидуальные инженерные решения по разработке и производству электроники под заказ.</p>
-    <a href="contact.html" class="btn-contact">Отправить производственные файлы</a>
-  </main>
+<main class="main-center">
+  <h1>Добро пожаловать в sautospb</h1>
+  <p>Индивидуальные инженерные решения по разработке и производству электроники под заказ.</p>
+  <a href="contact.html" class="btn-contact">Отправить производственные файлы</a>
+</main>
   <footer>
     &copy; 2025 sautospb. Все права защищены.
   </footer>

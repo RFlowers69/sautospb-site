@@ -1,0 +1,83 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Центрируем только на этой странице */
+  padding: 2rem;
+}
+.btn-contact {
+  background-color: #0056b3;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,86,179,0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-contact:hover {
+  background-color: #003d80;
+  box-shadow: 0 6px 12px rgba(0,61,128,0.5);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Центрируем только на этой странице */
+  padding: 2rem;
+}
+
+/* Добавим размеры и отступы заголовка и параграфа */
+main h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+}
+
+main p {
+  font-size: 1.25rem;
+  margin: 0 0 2rem 0;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Кнопка уже есть, можно оставить как есть */
+.btn-contact {
+  background-color: #0056b3;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,86,179,0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-contact:hover {
+  background-color: #003d80;
+  box-shadow: 0 6px 12px rgba(0,61,128,0.5);
+}
+
+/* Если у тебя есть медиа-запросы, добавь их тоже: */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2.2rem;
+  }
+  main p {
+    font-size: 1rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .btn-contact {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

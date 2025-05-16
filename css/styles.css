@@ -1,0 +1,79 @@
+/* Сброс и базовые настройки */
+html, body {
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+/* Заголовки, базовые размеры */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin: 1rem 0 0.5rem 0;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+/* Header, Nav, Footer */
+header {
+  background: #f4f4f4;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #003d80;
+}
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* Контейнер основного содержимого */
+main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+/* Сделать body flex-контейнером для правильного растяжения main */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Box-sizing для всех элементов */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Расширить html и body на 100% */
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
