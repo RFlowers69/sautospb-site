@@ -1,0 +1,19 @@
+# Игнорировать системные файлы
+.DS_Store
+Thumbs.db
+
+# Игнорировать папки и файлы IDE
+.vscode/
+.idea/
+*.log
+
+# Игнорировать node_modules (если есть)
+node_modules/
+
+# Игнорировать временные файлы и сборки
+dist/
+build/
+*.tmp
+*.temp
+
+secret.txt 
