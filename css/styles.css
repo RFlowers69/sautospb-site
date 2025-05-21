@@ -46,7 +46,7 @@ nav a:hover {
 footer {
   background: #f4f4f4;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 0.9rem;
   color: #555;
 }
@@ -76,4 +76,17 @@ body {
 html, body {
   height: 100%;
   box-sizing: border-box;
+}
+/* Убрать подчеркивание у логотипа-ссылки в header */
+.logo {
+  text-decoration: none;
+  color: inherit; /* Наследовать цвет от родителя */
+  font-weight: 700; /* Чтобы выделялось */
+  font-size: 1.2rem; /* Можно чуть увеличить */
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #003d80; /* Цвет при наведении, как у nav ссылок */
+  text-decoration: none; /* Не добавлять подчеркивание при hover */
 }
