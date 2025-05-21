@@ -1,0 +1,36 @@
+/* Сетка и оформление для страницы услуг */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #fff; /* тот же фон, что и у body */
+  border-radius: 0.5rem;
+}
+
+.column h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+.column ul {
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+  list-style-type: disc;
+  color: #333;
+}
+
+.column ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .columns {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
