@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>qbpcb — Оборудование</title>
+</head>
+<body class="inner-page">
+  <header class="bh-header">
+    <div class="bh-header-title">
+      <div id="logo-placeholder"></div>
+    </div>
+    <div class="bh-header-address">
+      Санкт-Петербург, Россия
+    </div>
+    <nav class="bh-nav">
+      <a href="services.html">Услуги</a>
+      <a href="equipment.html">Оборудование</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+  <main class="main-center">
+    
+    <h2>Поверхностный монтаж</h2>
+    <ul>
+      <li>
+        <strong>Neoden 4 — автоматический установщик SMD-компонентов.</strong>
+        <ul>
+          <li>Максимальный размер платы: 320×400 мм</li>
+          <li>Количество фидеров: 48</li>
+          <li>Точность установки: ±0,02 мм</li>
+          <li>Максимальная скорость монтажа: 10 000 компонентов/час</li>
+          <li>Поддерживаемые компоненты: SMD 0201 и крупнее, QFP, SOP, BGA</li>
+        </ul>
+      </li>
+      <li>
+        <strong>YS600 — полуавтоматический трафаретный принтер.</strong>
+        <ul>
+          <li>Максимальный размер платы: 400×600 мм</li>
+          <li>Точность позиционирования: ±0,01 мм</li>
+          <li>Подходит для мелкосерийного и среднего производства</li>
+        </ul>
+      </li>
+    </ul>
+
+    <br>
+
+    <h2>Выводной монтаж</h2>
+    <ul>
+      <li>Участок выводного монтажа на 5 рабочих мест, полностью укомплектованных</li>
+      <li>Участок лабораторного тестирования и ремонта</li>
+      <li>Участок отмывки и сушки электронных модулей</li>
+      <li>Участок лакировки</li>
+      <li>Участок механической и ручной сборки</li>
+      <li>Участок обработки провода для изготовления кабельных сборок</li>
+      <li>Склад электронных компонентов</li>
+    </ul>
+
+    <br>
+
+    <h2>3D-моделирование и прототипирование</h2>
+    <ul>
+      <li>
+        <strong>FDM 3D-принтеры Creality K1C и Creality K1MAX.</strong>
+        <ul>
+          <li>Creality K1C: максимальный размер печати 220×220×250 мм</li>
+          <li>Creality K1MAX: максимальный размер печати 300×300×300 мм</li>
+          <li>Максимальная скорость печати: до 600 мм/с</li>
+          <li>Точность печати: ±0,1 мм</li>
+          <li>Поддерживаемые материалы: PLA, ABS, PETG, TPU, CF</li>
+        </ul>
+      </li>
+      <li>
+        <strong>SLA 3D-принтер Creality Halot Mage 8K.</strong>
+        <ul>
+          <li>Максимальный размер печати: 228×128×230 мм</li>
+          <li>Разрешение: 8K (7680×4320 пикселей)</li>
+          <li>Толщина слоя: от 0,01 мм</li>
+          <li>Скорость печати: до 170 мм/ч</li>
+          <li>Поддерживаемые материалы: фотополимерные смолы</li>
+        </ul>
+      </li>
+    </ul>
+
+  </main>
+  <footer class="bh-footer">
+    <div class="bh-footer-content">Создано при поддержке Cursor</div>
+  </footer>
+  <script>
+    fetch('logo.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('logo-placeholder').innerHTML = html;
+      });
+  </script>
+</body>
+</html>

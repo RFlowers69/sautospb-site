@@ -1,0 +1,32 @@
+/* === Berkshire Hathaway Style START === */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #fff;
+  color: #000;
+}
+
+.main-center {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+h1, h2 {
+  color: #1a3a5b;
+  margin-top: 2em;
+}
+
+h1 {
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 2em;
+  color: #222;
+}
+
+/* === Конец: только специфические стили для контента === */ 

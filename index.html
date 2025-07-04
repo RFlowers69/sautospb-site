@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>qbpcb — Главная</title>
+  <meta charset="UTF-8">
+  <title>qbpcb</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/qbpcb.png" />
 </head>
-<body>
-  <header>
-    <div><strong><a href="index.html" class="logo">qbpcb</a></strong></div>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html">О компании</a>
+<body class="inner-page">
+  <header class="bh-header">
+    <div class="bh-header-title">
+      <div id="logo-placeholder"></div>
+    </div>
+    <div class="bh-header-address">
+      Санкт-Петербург, Россия
+    </div>
+    <nav class="bh-nav">
       <a href="services.html">Услуги</a>
+      <a href="equipment.html">Оборудование</a>
       <a href="contact.html">Контакты</a>
     </nav>
   </header>
-<main class="main-center">
-  <h1>Добро пожаловать в qbpcb</h1>
-  <p>Разработка, производство и монтаж электроники в Санкт-Петербурге.</p>
-  <a href="contact.html" class="btn-contact">Отправить производственные файлы</a>
-</main>
-  <footer>
-    &copy; 2025 qbpcb. Все права защищены.
+  <h1 class="main-hero-title">
+    Разработка и производство электроники<span class="cursor">|</span>
+  </h1>
+  <main class="main-center">
+    <section class="hero-gif-contact">
+      <img src="img/FX9TYIGIMK6DT8X.gif" alt="Demo GIF" class="hero-gif" />
+      <a href="contact.html" class="contact-btn">СВЯЗАТЬСЯ С НАМИ</a>
+    </section>
+    <div class="main-info-section">
+      <div class="main-info-inner">
+        <ul>
+          <li>Компания основана в 2016 году</li>
+          <li>Цикл производства от создания прототипа до серийного выпуска изделий</li>
+          <li>География клиентов по всей России</li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="clients-title">Довольные клиенты</h2>
+    <div class="clients-logos clients-logos--split">
+      <a href="https://proland.ru/" target="_blank" rel="noopener">
+        <img src="img/logo-proland.svg" alt="Proland" />
+      </a>
+      <a href="https://mgbot.ru/" target="_blank" rel="noopener">
+        <img src="img/logo-mgbot.png" alt="MGBOT" />
+      </a>
+      <a href="https://mobilecharge.ru/" target="_blank" rel="noopener">
+        <img src="img/logo-charger.png" alt="Mobile Charger" />
+      </a>
+      <a href="https://techno60.ru/" target="_blank" rel="noopener">
+        <img src="img/logo-techno.png" alt="Techno" />
+      </a>
+      <a href="https://www.fara-systems.com/MainPage_R.html" target="_blank" rel="noopener">
+        <img src="img/logo-fara.png" alt="FARA Systems" />
+      </a>
+      <a href="https://pi-automatic.ru/" target="_blank" rel="noopener">
+        <img src="img/logo-pi.svg" alt="PI-Automatic" />
+      </a>
+      <a href="https://domavtomatika.com/" target="_blank" rel="noopener">
+        <img src="img/logo-dom.png" alt="ДомАвтоматика" />
+      </a>
+      <a href="https://yablochkovtech.com/" target="_blank" rel="noopener">
+        <img src="img/logo-yablochkov.svg" alt="Яблочков" />
+      </a>
+    </div>
+  </main>
+  <footer class="bh-footer">
+    <div class="bh-footer-content">Создано при поддержке Cursor</div>
   </footer>
+  <script>
+    // Динамическая подгрузка логотипа
+    fetch('logo.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('logo-placeholder').innerHTML = html;
+      });
+    // Плавное появление логотипов заказчиков
+    function showVisibleLogos() {
+      document.querySelectorAll('.clients-logos img').forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 40) {
+          img.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', showVisibleLogos);
+    window.addEventListener('DOMContentLoaded', showVisibleLogos);
+  </script>
 </body>
 </html>

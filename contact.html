@@ -51,30 +51,40 @@
     }
   </script>
 </head>
-<body>
-  <header>
-    <div><strong><a href="index.html" class="logo">qbpcb</a></strong></div>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html">О компании</a>
+<body class="inner-page">
+  <header class="bh-header">
+    <div class="bh-header-title">
+      <div id="logo-placeholder"></div>
+    </div>
+    <div class="bh-header-address">
+      Санкт-Петербург, Россия
+    </div>
+    <nav class="bh-nav">
       <a href="services.html">Услуги</a>
+      <a href="equipment.html">Оборудование</a>
       <a href="contact.html">Контакты</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Контакты</h1>
-
-    <div id="map"></div>
-
+  <main class="main-center">
+    <!-- <h2>Контакты</h2> -->
     <div class="contact-info">
-      <p><strong>Телефон:</strong> +7 981 817 2769</p>
-      <p><strong>Email:</strong> info@qbpcb.ru</p>
+      <p><strong>Телефон:</strong> <a href="tel:+79995178574">+79995178574</a></p>
+      <p><strong>Email:</strong> <a href="mailto:qbpcb@mail.ru">qbpcb@mail.ru</a></p>
     </div>
+    <div id="map"></div>
   </main>
 
-  <footer>
-    &copy; 2025 qbpcb. Все права защищены.
+  <footer class="bh-footer">
+    <div class="bh-footer-content">Создано при поддержке Cursor</div>
   </footer>
+
+  <script>
+    fetch('logo.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('logo-placeholder').innerHTML = html;
+      });
+  </script>
 </body>
 </html>

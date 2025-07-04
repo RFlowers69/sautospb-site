@@ -1,4 +1,3 @@
-
 /* Сетка услуг — две колонки, с небольшими отступами */
 .services-grid {
   display: grid;
@@ -36,4 +35,3 @@
     grid-template-columns: 1fr;
   }
 }
-сы
