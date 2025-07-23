@@ -1,32 +1,202 @@
 /* === Berkshire Hathaway Style START === */
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   background: #fff;
-  color: #000;
+  color: #222;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .main-center {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2em 1em;
+  max-width: 760px;
+  margin: 4px auto 0 auto;
+  padding: 4px 2px;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #1a3a5b;
-  margin-top: 2em;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-top: 0.7em;
+  margin-bottom: 0.2em;
 }
 
 h1 {
-  margin-bottom: 1.5em;
+  font-size: 2rem;
 }
-
 h2 {
-  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
 }
+/*
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+}
+*/
 
 p {
   margin-bottom: 2em;
   color: #222;
 }
 
-/* === Конец: только специфические стили для контента === */ 
+ul {
+  margin-bottom: 0.2em;
+  padding-left: 1.2em;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 0.1em;
+}
+
+.equipment-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.2em 0 2em 0;
+  font-size: 1.05rem;
+  border: 2px solid #1890FF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(24, 144, 255, 0.08);
+  overflow: hidden;
+}
+.equipment-table th, .equipment-table td {
+  border: 1.5px solid #1890FF;
+  padding: 0.5em 0.8em;
+  text-align: left;
+  background: #fff;
+}
+.equipment-table th {
+  background: #f0f6ff;
+  font-weight: 700;
+}
+.equipment-table tr:nth-child(even) td {
+  background: #f8fbff;
+}
+.equipment-table th:first-child, .equipment-table td:first-child {
+  border-left: none;
+}
+.equipment-table th:last-child, .equipment-table td:last-child {
+  border-right: none;
+}
+.equipment-table tr:first-child th, .equipment-table tr:first-child td {
+  border-top: none;
+}
+.equipment-table tr:last-child th, .equipment-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* === Конец: только специфические стили для контента === */
+
+.equipment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5em;
+}
+.equipment-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(24, 144, 255, 0.10);
+  padding: 2.2em 2em 2em 2em;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto 2em auto;
+  transition: box-shadow 0.2s;
+  border: 2px solid #e6f0fa;
+}
+.equipment-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(24, 144, 255, 0.18);
+  border-color: #1890FF;
+}
+.equipment-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-bottom: 1.2em;
+}
+.equipment-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f6ff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 2px 8px 0 rgba(24, 144, 255, 0.08);
+}
+.equipment-title {
+  font-size: 2rem;
+  color: #1890FF;
+  margin: 0 0 0.2em 0;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.equipment-desc {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.2em;
+}
+.equipment-table.modern {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.2em 0 1.5em 0;
+  font-size: 1.08rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px 0 rgba(24, 144, 255, 0.08);
+  border: 1.5px solid #1890FF;
+}
+.equipment-table.modern th {
+  background: #e6f0fa;
+  color: #1890FF;
+  font-weight: 700;
+  border: none;
+  font-size: 1.02em;
+  padding: 0.7em 0.8em;
+}
+.equipment-table.modern td {
+  border: none;
+  padding: 0.7em 0.8em;
+  background: #fff;
+  vertical-align: middle;
+}
+.equipment-table.modern tr:nth-child(even) td {
+  background: #f8fbff;
+}
+.equipment-table.modern .icon-cell {
+  width: 36px;
+  text-align: center;
+  background: transparent;
+  padding: 0.3em 0.2em;
+}
+.equipment-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.2em;
+}
+.equipment-btn {
+  background: #1890FF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.6em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(24, 144, 255, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.equipment-btn:hover {
+  background: #1760c4;
+  box-shadow: 0 4px 16px 0 rgba(24, 144, 255, 0.18);
+} 

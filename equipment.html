@@ -2,9 +2,12 @@
 <html lang="ru">
 <head>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/services.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>qbpcb — Оборудование</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <title>Оборудование</title>
 </head>
 <body class="inner-page">
   <header class="bh-header">
@@ -12,7 +15,7 @@
       <div id="logo-placeholder"></div>
     </div>
     <div class="bh-header-address">
-      Санкт-Петербург, Россия
+      
     </div>
     <nav class="bh-nav">
       <a href="services.html">Услуги</a>
@@ -22,67 +25,15 @@
   </header>
   <main class="main-center">
     
-    <h2>Поверхностный монтаж</h2>
-    <ul>
-      <li>
-        <strong>Neoden 4 — автоматический установщик SMD-компонентов.</strong>
-        <ul>
-          <li>Максимальный размер платы: 320×400 мм</li>
-          <li>Количество фидеров: 48</li>
-          <li>Точность установки: ±0,02 мм</li>
-          <li>Максимальная скорость монтажа: 10 000 компонентов/час</li>
-          <li>Поддерживаемые компоненты: SMD 0201 и крупнее, QFP, SOP, BGA</li>
-        </ul>
-      </li>
-      <li>
-        <strong>YS600 — полуавтоматический трафаретный принтер.</strong>
-        <ul>
-          <li>Максимальный размер платы: 400×600 мм</li>
-          <li>Точность позиционирования: ±0,01 мм</li>
-          <li>Подходит для мелкосерийного и среднего производства</li>
-        </ul>
-      </li>
-    </ul>
-
-    <br>
-
-    <h2>Выводной монтаж</h2>
-    <ul>
-      <li>Участок выводного монтажа на 5 рабочих мест, полностью укомплектованных</li>
-      <li>Участок лабораторного тестирования и ремонта</li>
-      <li>Участок отмывки и сушки электронных модулей</li>
-      <li>Участок лакировки</li>
-      <li>Участок механической и ручной сборки</li>
-      <li>Участок обработки провода для изготовления кабельных сборок</li>
-      <li>Склад электронных компонентов</li>
-    </ul>
-
-    <br>
-
-    <h2>3D-моделирование и прототипирование</h2>
-    <ul>
-      <li>
-        <strong>FDM 3D-принтеры Creality K1C и Creality K1MAX.</strong>
-        <ul>
-          <li>Creality K1C: максимальный размер печати 220×220×250 мм</li>
-          <li>Creality K1MAX: максимальный размер печати 300×300×300 мм</li>
-          <li>Максимальная скорость печати: до 600 мм/с</li>
-          <li>Точность печати: ±0,1 мм</li>
-          <li>Поддерживаемые материалы: PLA, ABS, PETG, TPU, CF</li>
-        </ul>
-      </li>
-      <li>
-        <strong>SLA 3D-принтер Creality Halot Mage 8K.</strong>
-        <ul>
-          <li>Максимальный размер печати: 228×128×230 мм</li>
-          <li>Разрешение: 8K (7680×4320 пикселей)</li>
-          <li>Толщина слоя: от 0,01 мм</li>
-          <li>Скорость печати: до 170 мм/ч</li>
-          <li>Поддерживаемые материалы: фотополимерные смолы</li>
-        </ul>
-      </li>
-    </ul>
-
+    <div style="display: flex; flex-direction: column; align-items: center; max-width: 672px; margin: 0 auto 32px auto;">
+      <div id="equipment-card-container" style="width: 672px; height: 525px; display: flex; align-items: stretch; justify-content: center; margin: 0 auto;">
+        <button id="slider-prev" class="slider-arrow slider-arrow-outer" style="align-self: center; margin-right: 12px;">&#8592;</button>
+        <div id="equipment-card-content" style="width: 100%; display: flex; align-items: center; justify-content: center;"></div>
+        <button id="slider-next" class="slider-arrow slider-arrow-outer" style="align-self: center; margin-left: 12px;">&#8594;</button>
+      </div>
+      <div id="equipment-info-content" style="max-width: 672px; margin: 32px auto 0 auto;"></div>
+    </div>
+    
   </main>
   <footer class="bh-footer">
     <div class="bh-footer-content">Создано при поддержке Cursor</div>
@@ -94,5 +45,163 @@
         document.getElementById('logo-placeholder').innerHTML = html;
       });
   </script>
+  <script>
+    // Данные для карточек оборудования
+    const equipmentData = [
+      {
+        title: 'Полуавтоматический трафаретный принтер NeoDen YS 600',
+        img: 'img/ys600.jpeg',
+        imgAlt: 'YS600',
+        specs: [
+          'Максимальный размер платы: 600×240 мм',
+          'Точность печати ±0.02 мм'
+        ],
+        description: 'Трафаретный принтер обеспечивает высокоточное нанесение паяльной пасты, минимизирует дефекты пайки и позволяет работать с миниатюрными компонентами при серийном производстве.'
+      },
+      {
+        title: 'Автоматический установщик компонентов Neoden 4',
+        img: 'img/neoden4.jpg',
+        imgAlt: 'Neoden 4',
+        specs: [
+          'Максимальный размер платы: 320×400 мм',
+          'Количество фидеров: до 48',
+          'Скорость установки: до 10 000 компонентов/час',
+          'Поддержка компонентов: 0201, SOIC, QFP, BGA и др.',
+        ],
+        description: 'Установщик компонентов предназначен для быстрой и точной поверхностной сборки печатных плат. Оснащён интеллектуальной системой позиционирования.'
+      },
+      {
+        title: 'Конвекционная печь оплавления припоя Neoden T5L',
+        img: 'img/neodent5.jpg',
+        imgAlt: 'Neoden T5L',
+        specs: [
+          'Количество зон нагрева: 5',
+          'Максимальная температура: 300 °C',
+          'Размер рабочей зоны: 1200×250 мм',
+        ],
+        description: 'Печь оплавления предназначена для качественного и равномерного оплавления паяльной пасты на печатных платах. Благодаря пяти независимым зонам нагрева и точному контролю температуры обеспечивает стабильный результат пайки.'
+      },
+      {
+        title: 'Наши возможности',
+        img: '',
+        imgAlt: '',
+        specs: [],
+        description: ''
+      }
+    ];
+    let current = 0;
+    const total = equipmentData.length;
+    const cardContent = document.getElementById('equipment-card-content');
+    const prev = document.getElementById('slider-prev');
+    const next = document.getElementById('slider-next');
+    function renderCard(idx) {
+      const data = equipmentData[idx];
+      let imgStyle = "display:block; margin: 0 auto; max-width:70%; max-height: 455px; height:auto;";
+      let infoContentStyle = "max-width: 672px; margin: 32px auto 0 auto;";
+      let textAlign = "left";
+      let hrMargin = "4px 0 16px 0";
+      // Для первой карточки уменьшаю ширину до 76%
+      if (idx === 0) {
+        imgStyle = "display:block; margin: 0 auto; width:76%; max-width:none; max-height: 455px; height:auto;";
+      } else if (idx === 1) {
+        imgStyle = "display:block; margin: 0 auto; width:65%; max-width:none; max-height: 455px; height:auto;";
+      } else if (idx === 2) {
+        imgStyle = "display:block; margin: 0 auto; max-width:87.5%; max-height: 455px; height:auto;";
+      }
+      // Для четвертой карточки — только название и рамка
+      if (idx === 3) {
+        cardContent.innerHTML = `
+          <div class="equipment-card" style="width: 672px; height: 525px; display: flex; flex-direction: column; justify-content: flex-start; position: relative;">
+            <div style="color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.3rem; margin-top: 1.2em; margin-bottom: 0.5em; text-align: left;">${data.title}</div>
+            <div style="padding: 20px; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; min-height: 154px; max-height: 455px; height: 100%; background: #fff; overflow-y: auto;">
+              <div style=\"margin-top: 12px; color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem; text-align: left;\">Монтаж печатных плат</div>
+              <hr style=\"border: none; border-top: 3px solid #222; margin: 4px 0 12px 0; width: 100%;\">
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Сборочная линия на основе Neoden 4 с конвейерной печью NEODEN T5;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Инфракрасная печь оплавления припоя Zhengbang ZB5040HL;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Полуавтоматический трафаретный принтер YS600;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Ручной трафаретный принтер SMT3040H;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Четыре полностью укомплектованных места монтажника РЭА, включающих паяльную станцию Quick 202d ESD, паяльный фен Quick 857DW+, блок питания, осциллограф, мультиметр и многое другое;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Сушильный шкаф 5 kW;</p>
+              <p style=\"margin: 0 0 12px 0; font-size: 1.05rem; color: #222; text-align: left;\">Ванна ультразвуковая PS100A 30л.</p>
+              <div style=\"margin-top: 8px; color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem; text-align: left;\">Кабельные сборки</div>
+              <hr style=\"border: none; border-top: 3px solid #222; margin: 4px 0 12px 0; width: 100%;\">
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Станок зачистки и мерного реза провода SWT508C;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Полуавтоматический электрический станок для опрессовки EM-6B2;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">Машина мерной резки лент, липучек, трубок XQ-988;</p>
+              <p style=\"margin: 0 0 12px 0; font-size: 1.05rem; color: #222; text-align: left;\">Набор фирменных кримперов наиболее распространенных типов наконечников.</p>
+              <div style=\"margin-top: 8px; color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem; text-align: left;\">Прототипирование</div>
+              <hr style=\"border: none; border-top: 3px solid #222; margin: 4px 0 12px 0; width: 100%;\">
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">FDM 3D принтеры Creality K1C и Creality K1MAX;</p>
+              <p style=\"margin: 0 0 6px 0; font-size: 1.05rem; color: #222; text-align: left;\">SLA 3D принтер Creality Halot Mage 8K;</p>
+              <p style=\"margin: 0 0 0 0; font-size: 1.05rem; color: #222; text-align: left;\">Полный набор всего необходимого ручного, электрического и пневматического инструмента для выполнения большинства работ.</p>
+            </div>
+          </div>
+        `;
+        document.getElementById('equipment-info-content').innerHTML = '';
+        return;
+      }
+      // Для всех карточек выравнивание текста и линий одинаковое
+      cardContent.innerHTML = `
+        <div class="equipment-card" style="width: 672px; height: 525px; display: flex; flex-direction: column; justify-content: flex-start; position: relative;">
+          <div style="color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.3rem; margin-top: 1.2em; margin-bottom: 0.5em; text-align: left;">${data.title}</div>
+          <div style="padding: 20px; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 154px; max-height: 455px; height: 100%; background: #fff;">
+            <img src="${data.img}" alt="${data.imgAlt}" style="${imgStyle}">
+          </div>
+        </div>
+      `;
+      document.getElementById('equipment-info-content').innerHTML = `
+        <div style=\"margin-top: 12px; color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem; text-align: left;\">Технические характеристики</div>
+        <hr style=\"border: none; border-top: 3px solid #222; margin: 4px 0 16px 0; width: 100%;\">
+        ${data.specs.map(s => `<p style=\"margin: 0 0 0 0; font-size: 1.05rem; color: #222; text-align: left;\">${s}</p>`).join('')}
+        <div style=\"margin-top: 28px; color: #222; font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem; text-align: left;\">Описание</div>
+        <hr style=\"border: none; border-top: 3px solid #222; margin: 4px 0 16px 0; width: 100%;\">
+        <p style=\"margin: 0 0 0 0; font-size: 1.05rem; color: #222; text-align: left;\">${data.description}</p>
+      `;
+    }
+    prev.onclick = () => {
+      current = (current - 1 + total) % total;
+      renderCard(current);
+    };
+    next.onclick = () => {
+      current = (current + 1) % total;
+      renderCard(current);
+    };
+    renderCard(current);
+  </script>
+  <style>
+    .slider-arrow {
+      background: none;
+      border: none;
+      width: 64px;
+      height: 64px;
+      font-size: 2.5rem;
+      color: #222;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      padding: 0;
+      line-height: 1;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slider-arrow:hover {
+      opacity: 1;
+    }
+    .slider-arrow-outer {
+      position: static;
+      margin: 0;
+      border-radius: 0;
+      align-self: center;
+    }
+    .slider-arrow-outer svg, .slider-arrow-outer span {
+      display: block;
+    }
+    .slider-arrow-outer:active {
+      opacity: 0.9;
+    }
+    #slider-prev, #slider-next { left: unset; right: unset; }
+  </style>
 </body>
 </html>

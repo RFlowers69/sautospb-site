@@ -2,67 +2,63 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>qbpcb</title>
+  <title>Разработка и производство электроники</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="img/qbpcb.png" />
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <style>
+    .hero-banner {
+      min-height: 400px !important;
+      height: 400px !important;
+      background-color: #fff !important;
+    }
+  </style>
 </head>
 <body class="inner-page">
   <header class="bh-header">
-    <div class="bh-header-title">
-      <div id="logo-placeholder"></div>
+    <div style="width:1000px; margin:0 auto; display:flex; flex-direction:column; align-items:flex-start; gap:0;">
+      <div class="bh-header-title" style="width:100%;"><div id="logo-placeholder"></div></div>
+      <div class="bh-header-address"></div>
+      <nav class="bh-nav" style="width:100%;">
+        <a href="services.html">Услуги</a>
+        <a href="equipment.html">Оборудование</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
     </div>
-    <div class="bh-header-address">
-      Санкт-Петербург, Россия
-    </div>
-    <nav class="bh-nav">
-      <a href="services.html">Услуги</a>
-      <a href="equipment.html">Оборудование</a>
-      <a href="contact.html">Контакты</a>
-    </nav>
   </header>
-  <h1 class="main-hero-title">
-    Разработка и производство электроники<span class="cursor">|</span>
-  </h1>
-  <main class="main-center">
-    <section class="hero-gif-contact">
-      <img src="img/FX9TYIGIMK6DT8X.gif" alt="Demo GIF" class="hero-gif" />
-      <a href="contact.html" class="contact-btn">СВЯЗАТЬСЯ С НАМИ</a>
-    </section>
-    <div class="main-info-section">
-      <div class="main-info-inner">
-        <ul>
-          <li>Компания основана в 2016 году</li>
-          <li>Цикл производства от создания прототипа до серийного выпуска изделий</li>
-          <li>География клиентов по всей России</li>
-        </ul>
+  <div class="hero-banner">
+    <div class="hero-banner-background"></div>
+    <div class="hero-banner-content">
+      <div class="hero-banner-badge">Профессиональная разработка</div>
+      <h1>Разработка электроники</h1>
+      <p class="hero-banner-subtitle">Быстрое прототипирование и производство печатных плат любой сложности</p>
+      <div class="hero-banner-features">
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <span>Срок изготовления от 24 часов</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✓</span>
+          <span>Контроль качества на всех этапах</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🏭</span>
+          <span>Собственное производство</span>
+        </div>
       </div>
+      <a href="contact.html" class="hero-banner-btn">Заказать проект</a>
     </div>
-    <h2 class="clients-title">Довольные клиенты</h2>
+  </div>
+  <main class="main-center">
+    <h2 class="clients-title">Клиенты по всей России</h2>
     <div class="clients-logos clients-logos--split">
-      <a href="https://proland.ru/" target="_blank" rel="noopener">
-        <img src="img/logo-proland.svg" alt="Proland" />
-      </a>
-      <a href="https://mgbot.ru/" target="_blank" rel="noopener">
-        <img src="img/logo-mgbot.png" alt="MGBOT" />
-      </a>
-      <a href="https://mobilecharge.ru/" target="_blank" rel="noopener">
-        <img src="img/logo-charger.png" alt="Mobile Charger" />
-      </a>
-      <a href="https://techno60.ru/" target="_blank" rel="noopener">
-        <img src="img/logo-techno.png" alt="Techno" />
-      </a>
-      <a href="https://www.fara-systems.com/MainPage_R.html" target="_blank" rel="noopener">
-        <img src="img/logo-fara.png" alt="FARA Systems" />
-      </a>
-      <a href="https://pi-automatic.ru/" target="_blank" rel="noopener">
-        <img src="img/logo-pi.svg" alt="PI-Automatic" />
-      </a>
-      <a href="https://domavtomatika.com/" target="_blank" rel="noopener">
-        <img src="img/logo-dom.png" alt="ДомАвтоматика" />
-      </a>
-      <a href="https://yablochkovtech.com/" target="_blank" rel="noopener">
-        <img src="img/logo-yablochkov.svg" alt="Яблочков" />
-      </a>
+      <a href="https://mobilecharge.ru/" target="_blank" rel="noopener"><img src="img/logo-charger.png" alt="Charger" class="client-logo-img" /></a>
+      <a href="https://domavtomatika.com/en/" target="_blank" rel="noopener"><img src="img/logo-dom.png" alt="Dom" class="client-logo-img" /></a>
+      <a href="https://mgbot.ru" target="_blank" rel="noopener"><img src="img/logo-mgbot.png" alt="MGBot" class="client-logo-img" /></a>
+      <a href="https://pi-automatic.ru/" target="_blank" rel="noopener"><img src="img/logo-pi.svg" alt="Pi" class="client-logo-img" /></a>
+      <a href="https://proland.ru" target="_blank" rel="noopener"><img src="img/logo-proland.svg" alt="Proland" class="client-logo-img" /></a>
+      <a href="https://www.techno60.ru/" target="_blank" rel="noopener"><img src="img/logo-techno.png" alt="Techno" class="client-logo-img" /></a>
+      <a href="https://yablochkovtech.com/" target="_blank" rel="noopener"><img src="img/logo-yablochkov.svg" alt="Яблочков" class="client-logo-img" /></a>
     </div>
   </main>
   <footer class="bh-footer">
@@ -75,17 +71,7 @@
       .then(html => {
         document.getElementById('logo-placeholder').innerHTML = html;
       });
-    // Плавное появление логотипов заказчиков
-    function showVisibleLogos() {
-      document.querySelectorAll('.clients-logos img').forEach(img => {
-        const rect = img.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 40) {
-          img.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', showVisibleLogos);
-    window.addEventListener('DOMContentLoaded', showVisibleLogos);
   </script>
 </body>
 </html>
+

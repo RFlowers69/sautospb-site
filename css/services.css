@@ -9,24 +9,39 @@
 }
 
 /* Заголовки каждого блока услуг */
+.service-block h2, .service-block h3 {
+  color: #1a3a5b;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-top: 0.7em;
+  margin-bottom: 0.2em;
+}
+
 .service-block h2 {
   font-size: 1.3rem;
-  color: #0056b3;
-  margin-bottom: 0.1rem; /* уменьшенный отступ */
+}
+
+.service-block h3 {
+  color: #1a3a5b;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.7em;
+  margin-bottom: 0.2em;
 }
 
 /* Списки услуг */
 .service-block ul {
   padding-left: 1.2rem;
   list-style-type: disc;
-  margin: 0;
-  color: #333;
+  margin: 0 0 0.2em 0;
+  color: #222;
 }
 
 .service-block ul li {
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
-  line-height: 1.4;
+  margin-bottom: 0.1em;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 /* Адаптив для мобильных — одна колонка */
@@ -34,4 +49,48 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.equipment-block {
+  background: #f8fbff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(24, 144, 255, 0.07);
+  padding: 1.1em 1.2em 1em 1.2em;
+  margin-bottom: 1.3em;
+  margin-top: 0.7em;
+}
+
+.equipment-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #52C41A;
+  margin-bottom: 0.5em;
+}
+
+/* Лаймово-зелёный акцент для важных характеристик */
+.equipment-accent {
+  color: #52C41A;
+  font-weight: 600;
+}
+
+/* Пример для будущих кнопок/ссылок */
+.button-accent {
+  background: #52C41A;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s;
+}
+.button-accent:hover {
+  background: #389e0d;
+}
+a.equipment-link {
+  color: #52C41A;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a.equipment-link:hover {
+  color: #1890FF;
 }
